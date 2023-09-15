@@ -9,6 +9,8 @@ const elementsWithHover = document.querySelectorAll('.b1, .b2, .b3, .b4, .b5, .b
 let isHovered = false;
 let isClicked = false;
 
+
+// delay of url click
 function delay(URL) {
   setTimeout(function () {
     window.location = URL;
