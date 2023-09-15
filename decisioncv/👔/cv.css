@@ -1,0 +1,105 @@
+html {
+    height: 100%;
+    
+}
+body {
+    background-color:rgb(247, 254, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 1.3s;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: translateX(-60%);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.bigcontainer {
+    flex-direction: column;
+    width: 70vw;
+}
+
+#back {
+    font-family: 'Mulish';
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 0.95;
+}
+
+#title {
+    font-family: 'Mulish';
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 0.95;
+}
+
+.tilt:hover {
+    font-style: italic;
+}
+h1 {
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 0.95;
+}
+
+h2 {
+    font-family: 'Mulish';
+    font-weight: 100;
+    font-size: 19px;
+    line-height: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td:first-child {
+    width: 25vw;
+    vertical-align: top;
+}
+
+
+
+#line {
+    margin-top: -15px;
+    height: 5px;
+    background-color: black;
+    width: 90%;
+}
+
+.linetop {
+    margin-top: 10px;
+    height: 5px;
+    background-color: black;
+    width: 90%;
+}
+.container1 {
+    margin-top: 20px;
+    border: 0px solid;  
+    border: 0px solid green
+}
+
+.container2 {
+    display: flex;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 650px) {
+    #title {
+        font-size: 80px;
+    }
+}
+    

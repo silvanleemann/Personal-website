@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>2008</title>
+    <link rel="stylesheet" type="text/css" href="steckbrief.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/98.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  </head>
+  <body onload="showOnLoad('pop1'), typeWriter(), setTimeout(function() { showOnLoad('pop3'); }, 1000), setTimeout(function() { showOnLoad('pop4'); }, 2000),setTimeout(function() { showOnLoad('pop5'); }, 500)"> <!-- showOnLoad()-->
+    <!-- container for Pop up-->
+
+    <audio  id="myAudio" autoplay>
+      <source src="media/startup.mp3" type="audio/mpeg"/>
+    </audio>
+    <div class="up pop" id="pop1">
+      <div id="containerpopup" >
+          <div class="title-bar">
+            <div class="title-bar-text"> hi and welcome :)</div>
+            <div class="title-bar-controls">
+                        
+              <button aria-label="Close" onclick="hide('pop1')"></button>
+      
+            </div>
+          </div>
+          <div class="titlepopup">  </div>
+          <div class="textpopup" id="texttyping">  </div>
+        </div>
+    </div>
+
+    <div class="up pop2" id="pop2">
+      <div id="containerpopup" >
+          <div class="title-bar">
+            <div class="title-bar-text"> DJ  Pop-Up 🪩</div>
+            <div class="title-bar-controls">
+              
+              <button aria-label="Close" onclick="hide('pop2')"></button>
+      
+            </div>
+          </div>
+          <div class="titlepopup">  </div>
+          <img src="media/dj.gif">
+          <img src="media/dj.gif">
+          <img src="media/dj.gif">
+        </div>
+    </div>
+
+    <div class="up pop3" id="pop3">
+      <div id="containerpopup" >
+          <div class="title-bar" style="width: 220px;">
+            <div class="title-bar-text">  first_kindergarten_day.jpg</div>
+            <div class="title-bar-controls">
+              
+              <button aria-label="Close" onclick="hide('pop3')"></button>
+      
+            </div>
+          </div>
+          <img src="media/young1.jpg" draggable="false" style="height: 400px; width: auto;">
+        </div>
+    </div>
+
+
+    <div class="up pop4" id="pop4">
+      <div id="containerpopup" >
+          <div class="title-bar" style="width: 300px;">
+            <div class="title-bar-text">  the_gardener.jpg </div>
+            <div class="title-bar-controls">
+              
+              <button aria-label="Close" onclick="hide('pop4')"></button>
+      
+            </div>
+          </div>
+          <img src="media/young2.jpg" draggable="false" style="height: 400px; width: auto;">
+        </div>
+    </div>
+
+    <div class="up pop5" id="pop5">
+      <div id="containerpopup" >
+          <div class="title-bar" style="width: 300px;">
+            <div class="title-bar-text"> no_sweat.jpg </div>
+            <div class="title-bar-controls">
+              
+              <button aria-label="Close" onclick="hide('pop5')"></button>
+      
+            </div>
+          </div>
+          <img src="media/young3.jpg" draggable="false" style="height: 400px; width: auto;">
+        </div>
+    </div>
+      
+      <!-- Top container with hi and Welcome-->
+      <div class="home">
+      <a href="../../index.html" class="green"> Home </a>
+      <div class="containertop">
+       <img class="banner" src="media/wordart.png">
+       <text class="texttop"> This subpage introduces the creator of the website and its purpose
+       </text>
+      </div>
+    </div>
+    
+    
+
+        <div class="container">
+          <div class="column2">
+            <div style="margin-left: 20px"><h4> Silvan`s Character Sketch </h4></div>
+              <ul style="margin-top: -22px;">
+                <li>Your name: Silvan Elis Leemann </li>
+                <li Id="age">Age: <button onclick="buttonAge()" style="margin-right: 10px"> calculate age</button></li>
+                <li>Nickname: Silvi, Lemä </li>
+                <li> Favorite color: <div class="color">Cobalt #0042AA</div> </li>
+                <li>Where you live: In Switzerland, in the canton of Zürich 🇨🇭</li>
+                <li title="and very handsome">Describe yourself in three words: Curious, ambitious and versatile </li>
+                <li title="the goat">Your idol is: Roger Federer</li>
+                <li title="when standing on my money i'm 6'6">Your height: 187cm </li>
+                <li title="i'm unemployed">What is your Job? I'm serving my social service at a primary school and in September 23 I'll start my studies.</li>
+                <li>If you were an animal you would be: blue whale 🐋  </li>
+                <li>Your favorite song: <a href="https://www.youtube.com/watch?v=eimgRedLkkU" target="_blank"> Walking on a dream - Empire of the sun</a> - Other songs I like you can find <a title="my spotify" href="https://open.spotify.com/user/schneemann66?si=ARcdzGBnQ9-nrLhHZ5DbKA&nd=1">here</a>   </li>
+                <li>Do you have siblings: Yes - two smaller brothers </li>
+                <li>Languages in which you can hold a conversation: (Swiss-) German. English, French, Spanish 🧐</li>
+                <li>Your favorite book? Schachnovelle - Stefan Zweig</li>
+                <li>You love the sent of: freshly cut grass </li>
+                <li>You went to school in: Winterthur Kantonsschule Rychenberg 🎓</li>
+                <li>Are you single: Yes -> please send in your dating appliances to <a href= "mailto:leemann.silvan@gmail.com?subject=Dating%20Appliance%20%3C3&body=Why%20are%20we%20the%20perfect%20match?">leemann.silvan@gmail.com</a> </li>
+                <li>Do you drink coffee? No, not yet. I reserve it for times when i'm really going to need it</li>
+                <li>What's your favorite place? balmy summer evening by the lake or sea 🏖️ </li>
+                <li>What is your biggest fear? failing</li>
+                <li title="not meant in an ambiguous way ;">Do you do sports? I play soccer for Fc Seuzach and I love any sport that involves a ball ⚽️🎾🏀🏐</li>
+                <li>Your favorite food: Good Bread with salted butter 👨🏻‍🍳 </li>
+                <li>What qualities do you admire most in other people? Authenticity, optimism and positivity</li>
+                <li title="christopher the goat">Favorite movie? Memento - Christopher Nolan</li>
+                <li>What inspired you to start your website? <a href="https://youtu.be/acBJsjCqgtM?t=51" target="_blank">Why everyone should have a website - Ali Abdaal</a> </li>
+                <li>Are you good at coding? No, but good at googling 👨🏽‍💻</li>
+                <li>Do you have any hidden talents? I taught myself haircutting during corona </li>
+                <li>How do you commute to work? By bike</li>
+                <li>What’s the best concert you’ve ever been to? Loyle Carner Hugo Tour in Zürich</li>
+                <li title="your mom">What's a topic that keeps your mind running at night? How we remember -<a title="wikipedia article about the human memory"href="https://en.wikipedia.org/wiki/Memory"> Memories </a></li>
+                <li title="hmu"> If you can relate to an answer, have an additional question, disagree strongly with an opinion, want to get something of your chest or just want say hi <br>
+                  📲 Please contact me via my <a title="my socials"href="../../contact/contact.html"> socials </a>.  </li>
+                
+              </ul>
+              
+          </div>
+
+
+      <div class="columnr">
+          <div class="column1">
+              <h2 style="margin-bottom: 2px; margin-top: 4px;"> Purpose </h2>
+              <text class="text"> The purpose of this website is to showcase my personality. I want to create a product that reflects who I am and that I am proud to share with others. The webpage aims to connect me with new contacts and encourage visitors to get in touch with me. It should be simple, colorful, eye-catching, abstract, informative, and entertaining. </text>
+              <div class="gifcontainer">
+                <img src="media/1.gif" >  
+                <img src="media/6.gif" onclick="show('pop2')"> 
+                <img src="media/7.gif" > 
+                <img src="media/2.gif" >
+                <img src="media/8.gif" >    
+              </div> 
+          </div>
+          
+              
+              <div id="board">
+                <div id="start"> 
+                  <div id="instruction">*ARROW-L / R* TO MOVE </div>
+                  <div id="instruction">*SPACE* TO SHOOT </div>
+                  
+                    <button id="startbutton" onclick="game(); hide1()"> START GAME </button>
+                </div>
+              
+              <div id="jet"></div>
+              <div id="points">0</div>
+              
+            </div>
+            
+            </div>
+          
+
+
+        </div>
+          
+          
+         
+        
+
+
+
+        <div class="penguin">
+          <img src="media/rocket.gif" style="width: 90vw">
+        </div>
+        <div class="again" onclick="again()">CLICK TO SHOW POP UPs AGAIN</div>
+
+        <script src="app.js" defer></script>
+  </body>
+</html>

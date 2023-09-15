@@ -1,0 +1,514 @@
+html {
+    cursor: none;
+}
+
+body {
+    background-color: rgb(0, 40, 190);     
+    margin:0; 
+    padding:0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+    pointer-events: fill;
+    position: absolute;
+}
+
+a {
+    cursor: none;
+    text-decoration: none;
+}
+
+
+  #cursor {
+    position: absolute;
+    pointer-events: fill;
+    background-size: 0%;
+    width: 4vw;
+    height: 4vw;
+    background-color: #dbff55;
+    border: 8px solid #dbff55;;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    transition: background-color 200ms ease, height 500ms ease-out, width 500ms ease-out;
+}
+
+
+  
+  #cursorhover {
+    position: absolute;
+    pointer-events: none;
+    width: 8vw;
+    height: 8vw;
+    background-color: transparent;
+    border: 8px solid #dbff55;;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    transition: height 1000ms ease-out, width 1000ms ease-out;
+}
+
+#cursordown {
+    position: absolute;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    background-color: #dbff55;
+    border: 8px solid #dbff55;;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    transition: background-color 100ms ease, height 100ms ease-out, width 200ms ease-out;
+}
+
+  
+.container {
+    width: 70vw;
+    height: 70vh;
+    transition:  1000ms;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+
+
+
+
+/* wrapper1 containes blobs 1-3 */
+.wrapper1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    transition-timing-function: ease-in-out;
+    transition: 500ms;
+}
+
+/* .bx contains blobx and tx */
+.b1 {
+    position: relative;
+    width: 30%;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1300ms;
+    padding-left: 2vh;
+    transform: translate(-100%, -150%);
+}
+
+#blob1 {
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    position: absolute;
+    z-index: 1;
+    transform: scale(0.8, 1);
+}
+
+.b1:hover, .b1.hovered #blob1 {
+    transform: scale(1.3, 1.6) translate(-10%, -1.5%) rotateZ(20deg);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+    
+}
+
+/* the scaling effect is achieved by scaling of the #blobx and margins in the .bx  class */
+.b1:hover, .b1.hovered {
+    margin-right: 4vh;
+    margin-bottom: 2vh;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+}
+
+.b1:hover, .b1.hovered .t1 {
+    transform: translate(-2.6vw, 0.3vh);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1000ms;
+}
+
+.t1 {
+    z-index: 2;
+    position: relative;
+    transform: translate(-6vh, 0.5vh);
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    height: 50%;
+    font-size: 90px;
+    fill: #f24236;
+    font-family: PTMono-Bold, PT Mono;
+    font-weight: 700;
+    z-index: 9;
+}
+
+
+
+
+.b2 {
+    position: relative;
+    width: 30%;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1300ms;
+    padding-left: 2vw;
+    transform: translate(0%, -150%);
+}
+
+
+#blob2 {
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    position: absolute;
+    z-index: 1;
+    transform: scale(1, 0.8);
+}
+
+.b2:hover, .b2.hovered #blob2 {
+    transform: scale(1.1, 1.6) translate(-8%, 2%);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+    
+}
+
+.b2:hover, .b2.hovered .t2 {
+    transform: translateX(-18%) translateY(15%);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1000ms;
+}
+
+
+
+
+.b2:hover, .b2.hovered {
+    margin-right: 3vw;
+    margin-left: 7vw;
+    margin-bottom: 4vh;
+    transform: scale(1.1);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+
+}
+
+
+.t2 {
+    height: 50%;
+    z-index: 2;
+    position: relative;
+    transform: translate(-6vw);
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    font-size: 90px;
+    fill: #002900;
+    font-family: PTMono-Bold, PT Mono;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+
+/* third bubble (from l to r) defines the height of all .bx classes -> therefore we cannot animate the y 
+change in distance on :hover to the 4th bubble smoothly with margin-bottom */
+
+.b3 {
+    position: relative;
+    width: 40%;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1300ms;
+    transform: translate(100%, -150%);
+
+}
+
+#blob3 {
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    position: absolute;
+    z-index: 1;
+}
+
+.b3:hover, .b3.hovered #blob3 {
+    transform: scale(1.2, 0.8) translate(0%, -25%) rotate(-15deg);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+    
+}
+
+.b3:hover, .b3.hovered {
+    margin-left: 2vw;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+}
+
+/* .b3:hover ~ .wrapper2 {
+    background-color: black;
+    transform: scale(1.6);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms; 
+} */
+
+.b3:hover, .b3.hovered .t3 {
+    transform: translateX(10%) translateY(20%);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1000ms;
+}
+
+.t3 {
+    z-index: 2;
+    position: relative;
+    transform: translateX(30%) translateY(45%);
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    font-size: 65px;
+    fill: #f24236;
+    font-family: PTMono-Bold, PT Mono;
+    font-weight: 700;
+}
+
+.wrapper2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: -8%;
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    z-index: 22;
+}
+
+.b4 {
+    width: 80%;
+    pointer-events: none;
+    position: relative;
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    z-index: 4;
+}
+
+#blob4 {
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.b4:hover, .b4.hovered #blob4 {
+    transform: scale(1.2, 1.3) translateY(-12%);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+}
+
+ .b4:hover, .b4.hovered .t4 {
+    transform: translateY(4%);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+ }
+
+.b4:hover, .b4.hovered {
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+    padding-top: 4vh;
+}
+
+.t4 {
+    z-index: 5;
+    position: relative;
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    font-size: 100px;
+    fill: #dbff55;
+    font-family: PTMono-Bold, PT Mono;
+    font-weight: 700;
+}
+
+
+
+
+.wrapper3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    transition-timing-function: ease-in-out;
+    transition: 500ms;
+    height: 30vh;
+    margin-top: -17%;
+    z-index: 10;
+}
+
+.b5 {
+    position: relative;
+    width: 30%;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1300ms;
+    padding-left: 2vw;
+    z-index: 11;
+    transform: translate(-100%, 150%);
+
+}
+
+#blob5 {
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    position: absolute;
+    z-index: 11;
+
+}
+
+.b5:hover, .b5.hovered #blob5 {
+    transform: scale(1.4) translateY(-6%);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+    
+}
+
+.b5:hover, .b5.hovered {
+    margin-right: 3vw;
+    margin-top: 1vh;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+}
+
+.b5:hover, .b5.hovered .t5 {
+    transform: translate(-0.5vw, -4vh);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1000ms;
+}
+
+.t5 {
+    z-index: 13;
+    position: relative;
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    font-size: 98.5px;
+    fill: #e9fcff;
+    font-family: PTMono-Bold, PT Mono;
+    font-weight: 700;
+    transform: translate(0vw, -8vh);
+
+
+}
+
+
+.b6 {
+    position: relative;
+    width: 30%;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1300ms;
+    padding-left: 2vw;
+    z-index: 11;
+    transform: translate(-50%, 150%);
+
+}
+
+#blob6 {
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    position: absolute;
+    z-index: 11;
+
+}
+
+.b6:hover, .b6.hovered #blob6 {
+    transform: scale(1.1, 1.6) translateY(-15%) rotate(25deg) ;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+    
+}
+
+.b6:hover, .b6.hovered {
+    margin-right: 3vw;
+    margin-top: 5vh;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+}
+
+.b6:hover, .b6.hovered .t6 {
+    transform: translateX(2%) translateY(-5%);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1000ms;
+}
+
+.t6 {
+    z-index: 13;
+    position: relative;
+    transform: translate(4vw, 4vh);
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    font-size: 78px;
+    fill: #f24236;
+    font-family: PTMono-Bold, PT Mono;
+    font-weight: 700;
+      
+}
+
+
+.b7 {
+    position: relative;
+    width: 30%;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1300ms;
+    padding-left: 1vw;
+    z-index: 11;
+    transform: translate(100%, 150%);
+
+}
+
+#blob7 {
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    position: absolute;
+    z-index: 11;
+    transform: translate(-1.8v2, 2vh);
+}
+
+.b7:hover, .b7.hovered #blob7 {
+    transform: scale(1.1, 1.3) translateY(-24%) rotate(10deg);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+    
+}
+
+.b7:hover, .b7.hovered {
+    margin-right: 3vw;
+    margin-top: 5vh;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 800ms;
+}
+
+.b7:hover, .b7.hovered .t7 {
+    transform: translate(8%, -5%);
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: 1000ms;
+}
+
+.t7 {
+    z-index: 13;
+    position: relative;
+    transform: translate(4vw, 3vh);
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+    font-size: 98.5px;
+    fill: #002900;
+    font-family: PTMono-Bold, PT Mono;
+    font-weight: 700;
+}
+
+
+@media (max-width: 1000px) {
+    .container{
+        transform: translateY(16%);
+    }
+}
+
+@media (max-width: 500px) {
+    .container{
+        transform: translateY(25%);
+    }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .container{
+        transform: translateY(8%);
+    }
+}

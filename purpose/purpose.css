@@ -1,0 +1,142 @@
+html {
+    height: 100%;
+    
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 40, 190);
+    transition: 200ms;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.hidden {
+    opacity: 0;
+    transition: transform 3.3s;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: translateX(-60%);
+
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+.pre {
+    border-radius: 200vh 0vh 0vh 200vh ;
+    width: 100%;
+    height: 100%;
+    background-color: #f24236;
+    transform: translate(100vw, 0%)
+}
+
+.after {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color:  #f24236;
+    transition: 1.5s;
+    transform: translate(0, 0);
+    border-radius: 00px 0pc 0px 0px;
+
+    
+}
+
+
+.containertop {
+    position: absolute;
+    top: 5%;
+    width: 75%;
+    height: min-content;
+    margin-bottom: 200px;
+
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 75%;
+    height: min-content;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.title {
+    overflow-wrap: break-word;
+    font-family: 'Space Grotesk';    
+    font-weight: 800;
+    font-size: calc(3vw + 3vh);;
+    color: #e9fcff;
+    text-align: left;
+}
+
+.explore {
+    font-family: 'Caprasimo', cursive;    
+    font-size: calc(2vw + 2vh);
+    color: #e9fcff;
+    text-align: right;
+    opacity: 1;
+    transform: translate(100vw, 0vh);
+    
+}
+
+.pop {
+    font-family: 'Caprasimo', cursive;    
+    font-size: calc(2vw + 2vh);
+    color: #e9fcff;
+    text-align: right;
+    opacity: 1;
+    transform: translate(0, 0);
+    text-shadow: 0.5vw 0.5vh 0px rgb(0, 40, 190);
+    transition: transform 2000ms;
+    margin-top: 20vh;
+}
+
+.pop:hover {
+    text-shadow: none;
+    color: rgb(0, 40, 190);
+    transform: translate(0.5vw, 0.5vh);
+}
+
+
+
+.text {
+    overflow-wrap: break-word;
+    font-family: 'Space Grotesk'; 
+    font-weight: 1;   
+    font-size: 20px;
+    color: #e9fcff;
+    text-align: left;
+}
+
+#tag {
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: calc(3vw + 3vh);;
+    color: #e9fcff;
+    text-decoration: none;
+    margin-bottom: 1vh;
+}
+
+#tag:hover {
+   font-style: italic;
+   text-shadow: 0.6vw 0.6vh 0px rgb(0, 40, 190);
+}
+
+a {
+    text-decoration: none;
+}
+
+
