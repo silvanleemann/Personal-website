@@ -14,7 +14,7 @@ let isClicked = false;
 function delay(URL) {
   setTimeout(function () {
     window.location = URL;
-  }, 2000);
+  }, 800);
 }
 
 
