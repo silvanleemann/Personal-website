@@ -12,7 +12,7 @@ let isClicked = false;
 function delay(URL) {
   setTimeout(function () {
     window.location = URL;
-  }, 1100);
+  }, 2000);
 }
 
 
