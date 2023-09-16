@@ -81,7 +81,7 @@ document.addEventListener('mousemove', (event) => {
           isHovered = true;
 
           location.reload();
-        }, 2500);
+        }, 3500);
         } 
 
       
