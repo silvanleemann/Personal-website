@@ -11,14 +11,14 @@ let isClicked = false;
 
 
 // delay of url click
-/*
+
 function delay(URL) {
   setTimeout(function () {
     window.location = URL;
-  }, 800);
+  }, 500);
 }
 
-*/
+
 
 
 // function that incldes everything concerning the cursor
