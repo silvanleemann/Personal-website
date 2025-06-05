@@ -46,7 +46,7 @@ loader.load(
     './blenderimport/avatar.gltf',
     (gltf) => {
         avatar = gltf.scene;
-        avatar.scale.set(0.3, 0.3, 0.3);
+        avatar.scale.set(0.2, 0.2, 0.2);
         scene.add(avatar);
     },
     undefined,
@@ -60,8 +60,8 @@ const animate = () => {
     requestAnimationFrame(animate);
 
     if (avatar && isMouseDown) {
-        avatar.rotation.y = mouse.x * 0.5;
-        avatar.rotation.x = mouse.y * 0.5;
+        avatar.rotation.y = mouse.x * 1.5;
+        avatar.rotation.x = mouse.y * 1.5;
     }
 
     renderer.render(scene, camera);
