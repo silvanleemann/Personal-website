@@ -48,7 +48,7 @@ loader.load(
     './blenderimport/avatar.gltf',
     (gltf) => {
         avatar = gltf.scene;
-        avatar.scale.set(0.3, 0.3, 0.3);
+        avatar.scale.set(0.2, 0.2, 0.2);
         scene.add(avatar);
 
         // Setup animation mixer
@@ -76,7 +76,7 @@ const animate = () => {
     if (mixer) mixer.update(delta);
 
     if (avatar && isMouseDown) {
-        avatar.rotation.y = mouse.x * 0.5;
+        avatar.rotation.y = mouse.x * 4;
         avatar.rotation.x = mouse.y * 0.5;
     }
 
