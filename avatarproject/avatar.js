@@ -37,7 +37,7 @@ const loader = new GLTFLoader();
 let avatar = null;
 
 loader.load(
-    './avatar.gltf',
+    './blenderimport/avatar.gltf',
     (gltf) => {
         avatar = gltf.scene;
         avatar.scale.set(1, 1, 1);
