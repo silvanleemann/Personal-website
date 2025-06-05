@@ -40,7 +40,7 @@ loader.load(
     './blenderimport/avatar.gltf',
     (gltf) => {
         avatar = gltf.scene;
-        avatar.scale.set(1, 1, 1);
+        avatar.scale.set(0.5, 0.5, 0.5);
         scene.add(avatar);
     },
     undefined,
