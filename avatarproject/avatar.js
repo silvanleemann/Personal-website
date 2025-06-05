@@ -4,6 +4,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 const canvas = document.querySelector('.webgl');
 const scene = new THREE.Scene();
 
+let mixer = null;
+
 // Cam
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
 camera.position.z = 3;
@@ -46,8 +48,16 @@ loader.load(
     './blenderimport/avatar.gltf',
     (gltf) => {
         avatar = gltf.scene;
-        avatar.scale.set(0.2, 0.2, 0.2);
+        avatar.scale.set(0.3, 0.3, 0.3);
         scene.add(avatar);
+
+        // Setup animation mixer
+        if (gltf.animations && gltf.animations.length > 0) {
+            mixer = new THREE.AnimationMixer(avatar);
+            gltf.animations.forEach((clip) => {
+                mixer.clipAction(clip).play();
+            });
+        }
     },
     undefined,
     (error) => {
@@ -56,12 +66,18 @@ loader.load(
 );
 
 
+const clock = new THREE.Clock();
+
 const animate = () => {
     requestAnimationFrame(animate);
 
+    const delta = clock.getDelta();
+
+    if (mixer) mixer.update(delta);
+
     if (avatar && isMouseDown) {
-        avatar.rotation.y = mouse.x * 4;
-        avatar.rotation.x = mouse.y * 1.5;
+        avatar.rotation.y = mouse.x * 0.5;
+        avatar.rotation.x = mouse.y * 0.5;
     }
 
     renderer.render(scene, camera);
