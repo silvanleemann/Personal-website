@@ -60,7 +60,7 @@ const animate = () => {
     requestAnimationFrame(animate);
 
     if (avatar && isMouseDown) {
-        avatar.rotation.y = mouse.x * 1.5;
+        avatar.rotation.y = mouse.x * 4;
         avatar.rotation.x = mouse.y * 1.5;
     }
 
