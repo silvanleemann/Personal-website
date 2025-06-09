@@ -23,78 +23,60 @@ function delay(URL) {
 
 // function that incldes everything concerning the cursor
 document.addEventListener('mousemove', (event) => {
+  if (!isClicked) {
+    cursor.style.left = event.clientX + 'px';
+    cursor.style.top = event.clientY + 'px';
 
-      if (!isClicked) {
-      cursor.style.left = event.clientX + 'px';
-      cursor.style.top = event.clientY + 'px';
+    elementsWithHover.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
 
-      
-
-      elementsWithHover.forEach((element) => {
-        const rect = element.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-
-        if (x >= 0 && x < rect.width && y >= 0 && y < rect.height) {
-          isHovered = true;
-          element.classList.add('hovered');
-        } else {
-          element.classList.remove('hovered');
-        }
-      });
-    }
-
-      // changes cursor style 
-      if (isHovered) {
-        cursor.id = 'cursorhover';
+      if (x >= 0 && x < rect.width && y >= 0 && y < rect.height) {
+        isHovered = true;
+        element.classList.add('hovered');
       } else {
-        cursor.id = 'cursor';
+        element.classList.remove('hovered');
       }
+    });
+  }
 
-  
-      // expanding animation if cursor is on no hover area
-      document.addEventListener('mousedown', () => {
-        if (!isHovered){
-        cursor.id = 'cursordown';
-        }
-      });
+  // changes cursor style
+  if (isHovered) {
+    cursor.id = 'cursorhover';
+  } else {
+    cursor.id = 'cursor';
+  }
+});
 
+// expanding animation if cursor is on no hover area
+document.addEventListener('mousedown', () => {
+  if (!isHovered) {
+    cursor.id = 'cursordown';
+  }
+});
 
+document.addEventListener('click', () => {
+  if (isHovered) {
+    isClicked = true;
 
+    cursor.style.backgroundColor = "#dbff55";
+    cursor.style.width = "200%";
+    cursor.style.height = "200%";
 
+    setTimeout(function () {
+      cursor.style.backgroundColor = "#dbff55";
+      cursor.style.width = "80px";
+      cursor.style.height = "80px";
+      isClicked = false;
+      isHovered = true;
 
-    document.addEventListener('click', () => {
-      if (isHovered) {
-        
-        isClicked = true;
-
-        
-        cursor.style.backgroundColor = "#dbff55";
-        cursor.style.width = "200%";
-        cursor.style.height = "200%";
-
-        setTimeout(function() {
-          cursor.style.backgroundColor = "dbff55";
-          cursor.style.width = "80px";
-          cursor.style.height = "80px";
-          isClicked = false;
-          isHovered = true;
-
-          location.reload();
-        }, 3500);
-        } 
-
-      
-      else {
-        cursor.id = 'cursor';
-      }
-    });;
-
-
-
-    
-
-}); 
+      location.reload();
+    }, 3500);
+  } else {
+    cursor.id = 'cursor';
+  }
+});
 
 // makes sure the cursor switches back to #cursor when it leaves the hovering area
 elementsWithHover.forEach((element) => {
